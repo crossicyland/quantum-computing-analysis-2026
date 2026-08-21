@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026年至今中国量子计算融资清单</title>
+  <style>
+    :root { --bg:#f6f8fc; --panel:#ffffff; --text:#152238; --muted:#607089; --line:#dbe4f0; --brand:#2e6cf6; --shadow:0 10px 28px rgba(23,41,76,.08); --radius:18px; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:linear-gradient(180deg,#fbfdff 0%,var(--bg) 100%); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif; }
+    .wrap { max-width:1820px; margin:0 auto; padding:28px 24px 40px; }
+    .hero,.searchbar,.section-card,.summary-card { background:var(--panel); border:1px solid var(--line); border-radius:22px; box-shadow:var(--shadow); }
+    .hero { padding:28px; margin-bottom:18px; background:linear-gradient(135deg,#ffffff 0%,#eef4ff 100%); }
+    h1 { margin:0 0 12px; font-size:32px; line-height:1.2; }
+    .subtitle { margin:0; color:var(--muted); line-height:1.8; font-size:15px; }
+    .stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin:18px 0; }
+    .summary-card { padding:18px; }
+    .label { font-size:12px; color:var(--muted); letter-spacing:.04em; margin-bottom:8px; }
+    .value { font-size:28px; font-weight:700; line-height:1.2; }
+    .searchbar { padding:14px; margin-bottom:18px; }
+    input[type="search"] { width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:12px; font-size:14px; outline:none; }
+    input[type="search"]:focus { border-color:var(--brand); box-shadow:0 0 0 3px rgba(46,108,246,.12); }
+    .section-card { overflow:hidden; margin-bottom:18px; }
+    .section-head { padding:18px 20px 12px; border-bottom:1px solid var(--line); }
+    .section-title { margin:0; font-size:24px; }
+    .section-meta { margin-top:6px; color:var(--muted); font-size:14px; }
+    .table-wrap { overflow:auto; }
+    table { width:100%; min-width:1820px; border-collapse:collapse; }
+    thead th { background:#f3f7ff; color:#1d325c; font-size:13px; text-align:left; padding:14px 10px; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:1; }
+    tbody td { padding:14px 10px; border-bottom:1px solid #edf1f7; vertical-align:top; font-size:13px; line-height:1.75; }
+    tbody.group-start tr:first-child td { border-top:2px solid #dfe8f7; }
+    tbody tr:hover td { background:#fafcff; }
+    .company { font-weight:700; font-size:15px; }
+    .city { color:var(--muted); }
+    .valuation { font-weight:600; color:#1a4d8f; }
+    .round { display:inline-block; border-radius:999px; padding:4px 10px; background:#f4f6fa; border:1px solid #e2e8f3; color:#3c4a61; font-size:12px; }
+    .links a { display:inline-block; margin-right:10px; color:var(--brand); text-decoration:none; word-break:break-all; }
+    .links a:hover { text-decoration:underline; }
+    .hidden { display:none !important; }
+    .empty { display:none; padding:24px; color:var(--muted); text-align:center; background:var(--panel); border:1px dashed var(--line); border-radius:16px; margin-top:12px; }
+    @media (max-width:980px) { .wrap { padding:18px 14px 28px; } .hero { padding:20px; } .stats { grid-template-columns:1fr; } h1 { font-size:26px; } }
+  
+    /* --- 新增企业清单部分专用样式 --- */
+    .tag { display:inline-block; padding:3px 8px; border-radius:999px; font-size:12px; font-weight:500; white-space:nowrap; }
+    .tag-teal { background:#e1f5ee; color:#0f6e56; }
+    .tag-amber { background:#faeoda; color:#854f0b; }
+    .tag-blue { background:#e6f1fb; color:#185fa5; }
+    .tag-purple { background:#eeedfe; color:#534ab7; }
+    .tag-coral { background:#faece7; color:#993c1d; }
+    .tag-gray { background:#f1efe8; color:#607089; }
+    .route-label { display:inline-block; margin-left:8px; vertical-align:middle; }
+    .conclusion-box { background:linear-gradient(135deg,#e1f5ee 0%,#f0faf6 100%); border-left:4px solid #0f6e56; padding:16px 20px; border-radius:0 14px 14px 0; font-size:14px; line-height:1.9; margin:18px 0; color:#152238; }
+    .conclusion-box strong { color:#0f6e56; }
+    .divider { border:none; border-top:1px solid var(--line); margin:36px 0 24px; }
+    .year-cell { text-align:center; font-weight:600; }
+    .year-num { text-align:center; }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>2026 年至今中国量子计算融资清单</h1>
+      <p class="subtitle">统计范围为 2026-01-01 至 2026-08-20 的中国量子计算及相关产业链企业公开融资信息。页面按融资时间倒序展示，同一企业的多轮融资集中排列；融资时间统一采用"年.月"格式。估值数据来源于公开报道，标注"未披露"表示暂无公开估值信息。</p>
+    </section>
+    <section class="stats"><div class="summary-card"><div class="label">融资记录</div><div class="value">53</div></div><div class="summary-card"><div class="label">覆盖企业</div><div class="value">36</div></div><div class="summary-card"><div class="label">更新截止</div><div class="value">2026-08-20</div></div></section>
+    <section class="searchbar"><input id="search" type="search" placeholder="搜索企业、所在地、主营业务、估值、轮次、投资方..." /></section>
+    
+    <section class="section-card">
+      <div class="section-head">
+        <h2 class="section-title">核心量子计算企业</h2>
+        <div class="section-meta">29 家企业 · 43 条融资记录</div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:60px;">序号</th>
+              <th style="width:130px;">企业</th>
+              <th style="width:80px;">所在地</th>
+              <th style="width:300px;">主营业务</th>
+              <th style="width:140px;">当前估值</th>
+              <th style="width:160px;">主营证据</th>
+              <th style="width:100px;">融资时间</th>
+              <th style="width:110px;">轮次</th>
+              <th style="width:260px;">资方代表</th>
+              <th style="width:100px;">金额</th>
+              <th style="width:160px;">融资证据</th>
+            </tr>
+          </thead>
+          <tbody class="company-group group-start" data-search="核心量子计算企业 原子矩阵 杭州 中性原子量子计算 未披露 2026.08 A+ 数亿元 中性原子量子计算 云锋基金、三七互娱、普华资本、财通资本、上海半导体产投、唐兴资本、博睿资本、合创资本、海邦投资等共同参与，老股东民银国际持续加注 2026.05 A 数亿元 中性原子量子计算 砺思资本领投，民银国际跟投，老股东祥峰中国、L2F 光源创业者基金持续追加 2026.03 天使 未披露 中性原子量子计算 祥峰中国、九合创投"><tr><td>1</td><td rowspan="3"><div class="company">原子矩阵</div></td><td rowspan="3" class="city">杭州</td><td rowspan="3">中性原子量子计算</td><td rowspan="3" class="valuation">未披露</td><td rowspan="3" class="links"><a href="https://www.cnr.cn/tech/techph/20260820/t20260820_527783702.shtml" target="_blank" rel="noopener">主营证据 · cnr.cn</a></td><td>2026.08</td><td><span class="round">A+</span></td><td>云锋基金、三七互娱、普华资本、财通资本、上海半导体产投、唐兴资本、博睿资本、合创资本、海邦投资等共同参与，老股东民银国际持续加注</td><td>数亿元</td><td class="links"><a href="https://www.cnr.cn/tech/techph/20260820/t20260820_527783702.shtml" target="_blank" rel="noopener">融资证据 · cnr.cn</a></td></tr><tr><td>2</td><td>2026.05</td><td><span class="round">A</span></td><td>砺思资本领投，民银国际跟投，老股东祥峰中国、L2F 光源创业者基金持续追加</td><td>数亿元</td><td class="links"><a href="https://www.cnstock.com/commonDetail/718768" target="_blank" rel="noopener">融资证据 · cnstock.com</a></td></tr><tr><td>3</td><td>2026.03</td><td><span class="round">天使</span></td><td>祥峰中国、九合创投</td><td>未披露</td><td class="links"><a href="https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&amp;id=SN2026031210440495499c86" target="_blank" rel="noopener">融资证据 · gu.qq.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 硅臻芯片 合肥 通用光量子计算整机 / 光量子芯片 未披露 2026.08 B 超亿元 通用光量子计算整机 / 光量子芯片 韦豪创芯、共达电声联合领投，华策影视、苏创投、苏金控、创领资本、后浪资本等跟投"><tr><td>4</td><td rowspan="1"><div class="company">硅臻芯片</div></td><td rowspan="1" class="city">合肥</td><td rowspan="1">通用光量子计算整机 / 光量子芯片</td><td rowspan="1" class="valuation">未披露</td><td rowspan="1" class="links"><a href="https://new.qq.com/rain/a/20260815A04G4F00?refer=cp_1009" target="_blank" rel="noopener">主营证据 · new.qq.com</a></td><td>2026.08</td><td><span class="round">B</span></td><td>韦豪创芯、共达电声联合领投，华策影视、苏创投、苏金控、创领资本、后浪资本等跟投</td><td>超亿元</td><td class="links"><a href="https://finance.sina.com.cn/stock/bxjj/2026-08-15/doc-ininkfhq3631709.shtml" target="_blank" rel="noopener">融资证据 · finance.sina.com.cn</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 向量奇点 北京 中性原子通用量子计算机 未披露 2026.08 天使 超亿元 中性原子通用量子计算机 IDG资本领投，五源资本、耀途资本、英诺天使基金、零以创投及滴普科技参与"><tr><td>5</td><td rowspan="1"><div class="company">向量奇点</div></td><td rowspan="1" class="city">北京</td><td rowspan="1">中性原子通用量子计算机</td><td rowspan="1" class="valuation">未披露</td><td rowspan="1" class="links"><a href="https://www.thecapital.com.cn/newsDetail/124598" target="_blank" rel="noopener">主营证据 · thecapital.com.cn</a></td><td>2026.08</td><td><span class="round">天使</span></td><td>IDG资本领投，五源资本、耀途资本、英诺天使基金、零以创投及滴普科技参与</td><td>超亿元</td><td class="links"><a href="https://news.qq.com/rain/a/20260814A06QGE00" target="_blank" rel="noopener">融资证据 · news.qq.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 纳开量子 北京 中性原子量子计算 未披露 2026.08 天使+ 未披露 中性原子量子计算 长石资本领投，高瓴创投、飞图创投跟投，清流资本、云启资本、哇牛资本等参与 2026.06 天使 数千万元 中性原子量子计算 由高瓴创投领投，英诺、长石、飞图跟投"><tr><td>6</td><td rowspan="2"><div class="company">纳开量子</div></td><td rowspan="2" class="city">北京</td><td rowspan="2">中性原子量子计算</td><td rowspan="2" class="valuation">未披露</td><td rowspan="2" class="links"><a href="https://www.163.com/dy/article/L47903GH05198R3E.html" target="_blank" rel="noopener">主营证据 · 163.com</a></td><td>2026.08</td><td><span class="round">天使+</span></td><td>长石资本领投，高瓴创投、飞图创投跟投，清流资本、云启资本、哇牛资本等参与</td><td>未披露</td><td class="links"><a href="https://www.163.com/dy/article/L47A67FU0550B1DU.html" target="_blank" rel="noopener">融资证据 · 163.com</a></td></tr><tr><td>7</td><td>2026.06</td><td><span class="round">天使</span></td><td>由高瓴创投领投，英诺、长石、飞图跟投</td><td>数千万元</td><td class="links"><a href="https://www.toutiao.com/article/7657886623917310506/" target="_blank" rel="noopener">融资证据 · toutiao.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 不筹量子 上海 中性原子量子计算整机研发与产业化 约15亿元（A轮投前） 2026.08 A 数亿元 中性原子量子计算整机研发与产业化 国泰海通、金鼎资本、中芯聚源、上海科创集团、头部产投方、中信旗下基金、TCL创投、金浦智能、道禾长期投资、元禾控股、杨浦梦航、上海产业知识产权基金、川创投 2026.07 战略投资 数亿元 中性原子量子计算整机研发与产业化 海望资本、弘晖基金、东方嘉富、基石资本、元禾原点、复旦科创、彬复资本、尚颀资本、普华资本等"><tr><td>8</td><td rowspan="2"><div class="company">不筹量子</div></td><td rowspan="2" class="city">上海</td><td rowspan="2">中性原子量子计算整机研发与产业化</td><td rowspan="2" class="valuation">约15亿元（A轮投前）</td><td rowspan="2" class="links"><a href="https://news.10jqka.com.cn/20260812/c678893534.shtml" target="_blank" rel="noopener">主营证据 · news.10jqka.com.cn</a></td><td>2026.08</td><td><span class="round">A</span></td><td>国泰海通、金鼎资本、中芯聚源、上海科创集团、头部产投方、中信旗下基金、TCL创投、金浦智能、道禾长期投资、元禾控股、杨浦梦航、上海产业知识产权基金、川创投</td><td>数亿元</td><td class="links"><a href="https://k.sina.com.cn/article_6192937794_17120bb4202002sw6u.html" target="_blank" rel="noopener">融资证据 · k.sina.com.cn</a></td></tr><tr><td>9</td><td>2026.07</td><td><span class="round">战略投资</span></td><td>海望资本、弘晖基金、东方嘉富、基石资本、元禾原点、复旦科创、彬复资本、尚颀资本、普华资本等</td><td>数亿元</td><td class="links"><a href="https://m.10jqka.com.cn/20260722/c678357920.shtml" target="_blank" rel="noopener">融资证据 · m.10jqka.com.cn</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 酉术量子 上海 量子算法 / 量子科学计算平台 / Agent 驱动的量子科学计算软件基础设施 未披露 2026.08 种子 / 种子+ 数千万元 量子算法 / 量子科学计算平台 / Agent 驱动的量子科学计算软件基础设施 种子轮：元禾原点、东方富海、交大菡源资产；种子+轮：深创投、小苗基金、启高资本（前轮持续跟投）"><tr><td>10</td><td rowspan="1"><div class="company">酉术量子</div></td><td rowspan="1" class="city">上海</td><td rowspan="1">量子算法 / 量子科学计算平台 / Agent 驱动的量子科学计算软件基础设施</td><td rowspan="1" class="valuation">未披露</td><td rowspan="1" class="links"><a href="http://unitarylab.com/" target="_blank" rel="noopener">主营证据 · unitarylab.com</a></td><td>2026.08</td><td><span class="round">种子 / 种子+</span></td><td>种子轮：元禾原点、东方富海、交大菡源资产；种子+轮：深创投、小苗基金、启高资本（前轮持续跟投）</td><td>数千万元</td><td class="links"><a href="https://weibo.com/ttarticle/p/show?id=2309405328575619793245" target="_blank" rel="noopener">融资证据 · weibo.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 幺正量子 合肥 离子阱（QCCD） 约40亿元 2026.08 A 数亿元 离子阱（QCCD） 深创投领投，社保基金湾区科技创新股权投资基金、深圳市创新资本投资有限公司联合出资，广发信德、京铭资本、普华资本、启赋资本、兴泰资本、达晨财智、华控基金、首程控股、协鑫能科、灏浚投资、凯联资本、芯能创投、众为中国跟投 2026.03 Pre-A 数亿元 离子阱（QCCD） 蚂蚁集团、吉利资本、混沌投资、中博聚力、英飞尼迪、国元基金"><tr><td>11</td><td rowspan="2"><div class="company">幺正量子</div></td><td rowspan="2" class="city">合肥</td><td rowspan="2">离子阱（QCCD）</td><td rowspan="2" class="valuation">约40亿元</td><td rowspan="2" class="links"><a href="https://m.cnstock.com/commonDetail/754922" target="_blank" rel="noopener">主营证据 · m.cnstock.com</a></td><td>2026.08</td><td><span class="round">A</span></td><td>深创投领投，社保基金湾区科技创新股权投资基金、深圳市创新资本投资有限公司联合出资，广发信德、京铭资本、普华资本、启赋资本、兴泰资本、达晨财智、华控基金、首程控股、协鑫能科、灏浚投资、凯联资本、芯能创投、众为中国跟投</td><td>数亿元</td><td class="links"><a href="https://m.cnstock.com/commonDetail/754922" target="_blank" rel="noopener">融资证据 · m.cnstock.com</a></td></tr><tr><td>12</td><td>2026.03</td><td><span class="round">Pre-A</span></td><td>蚂蚁集团、吉利资本、混沌投资、中博聚力、英飞尼迪、国元基金</td><td>数亿元</td><td class="links"><a href="https://www.cnstock.com/commonDetail/659647" target="_blank" rel="noopener">融资证据 · cnstock.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 无界量子 上海 面向未来容错量子计算的 QPU 等核心基础设施 未披露 2026.08 天使 数千万元 面向未来容错量子计算的 QPU 等核心基础设施 复旦科创领投，险峰、前海方舟、中赢创投共同参与投资，睿远资本担任独家财务顾问"><tr><td>13</td><td rowspan="1"><div class="company">无界量子</div></td><td rowspan="1" class="city">上海</td><td rowspan="1">面向未来容错量子计算的 QPU 等核心基础设施</td><td rowspan="1" class="valuation">未披露</td><td rowspan="1" class="links"><a href="https://new.qq.com/rain/a/20260806A07JNF00" target="_blank" rel="noopener">主营证据 · new.qq.com</a></td><td>2026.08</td><td><span class="round">天使</span></td><td>复旦科创领投，险峰、前海方舟、中赢创投共同参与投资，睿远资本担任独家财务顾问</td><td>数千万元</td><td class="links"><a href="https://new.qq.com/rain/a/20260806A07JNF00" target="_blank" rel="noopener">融资证据 · new.qq.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 中科量枢 北京 量子计算操作系统 / 全栈软件平台 未披露 2026.07 天使 / 天使+ 数千万元 量子计算操作系统 / 全栈软件平台 天使轮：普华资本、知壹投资联合领投，九坤创投跟投；天使+轮：北工量子基金独家投资"><tr><td>14</td><td rowspan="1"><div class="company">中科量枢</div></td><td rowspan="1" class="city">北京</td><td rowspan="1">量子计算操作系统 / 全栈软件平台</td><td rowspan="1" class="valuation">未披露</td><td rowspan="1" class="links"><a href="https://new.qq.com/rain/a/20260720A04KYF00" target="_blank" rel="noopener">主营证据 · new.qq.com</a></td><td>2026.07</td><td><span class="round">天使 / 天使+</span></td><td>天使轮：普华资本、知壹投资联合领投，九坤创投跟投；天使+轮：北工量子基金独家投资</td><td>数千万元</td><td class="links"><a href="https://new.qq.com/rain/a/20260720A04KYF00" target="_blank" rel="noopener">融资证据 · new.qq.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 逻辑比特 杭州 超导量子计算 约40亿元 2026.07 A 数亿元 超导量子计算 康君资本、混沌投资（葛卫东）联合领投，国开科创、元璟资本、上海未来产业基金、IDG资本、中芯聚源、芯联资本、弘晖基金、TCL创投、厚雪资本跟投，老股东经纬创投、东方嘉富、达晨财智、华控基金、深创投、藕舫天使、华夏恒天持续加码 2026.03 Pre-A 数亿元 超导量子计算 达晨财智、经纬创投"><tr><td>15</td><td rowspan="2"><div class="company">逻辑比特</div></td><td rowspan="2" class="city">杭州</td><td rowspan="2">超导量子计算</td><td rowspan="2" class="valuation">约40亿元</td><td rowspan="2" class="links"><a href="https://www.sohu.com/a/1049771872_120159035" target="_blank" rel="noopener">主营证据 · sohu.com</a></td><td>2026.07</td><td><span class="round">A</span></td><td>康君资本、混沌投资（葛卫东）联合领投，国开科创、元璟资本、上海未来产业基金、IDG资本、中芯聚源、芯联资本、弘晖基金、TCL创投、厚雪资本跟投，老股东经纬创投、东方嘉富、达晨财智、华控基金、深创投、藕舫天使、华夏恒天持续加码</td><td>数亿元</td><td class="links"><a href="https://www.sohu.com/a/1049771872_120159035" target="_blank" rel="noopener">融资证据 · sohu.com</a></td></tr><tr><td>16</td><td>2026.03</td><td><span class="round">Pre-A</span></td><td>达晨财智、经纬创投</td><td>数亿元</td><td class="links"><a href="https://app.dahecube.com/nweb/pc/article.html?artid=266550%3Frecid%3D178%3Fqtype%3D0" target="_blank" rel="noopener">融资证据 · app.dahecube.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 两仪万象 北京 中性原子量子计算 约40亿元 2026.07 A+ 数亿元 中性原子量子计算 君联资本领投，北京基石创投、上海科创基金、北洋海棠基金、中信建投投资新增入局，顺为资本、科大讯飞持续加注 2026.04 A 1 亿 中性原子量子计算 京国瑞、顺为资本、讯飞创投、君联资本、亦庄国投"><tr><td>17</td><td rowspan="2"><div class="company">两仪万象</div></td><td rowspan="2" class="city">北京</td><td rowspan="2">中性原子量子计算</td><td rowspan="2" class="valuation">约40亿元</td><td rowspan="2" class="links"><a href="https://www.toutiao.com/article/7664231886033666610" target="_blank" rel="noopener">主营证据 · toutiao.com</a></td><td>2026.07</td><td><span class="round">A+</span></td><td>君联资本领投，北京基石创投、上海科创基金、北洋海棠基金、中信建投投资新增入局，顺为资本、科大讯飞持续加注</td><td>数亿元</td><td class="links"><a href="https://www.toutiao.com/article/7664231886033666610" target="_blank" rel="noopener">融资证据 · toutiao.com</a></td></tr><tr><td>18</td><td>2026.04</td><td><span class="round">A</span></td><td>京国瑞、顺为资本、讯飞创投、君联资本、亦庄国投</td><td>1 亿</td><td class="links"><a href="https://www.cnstock.com/commonDetail/666645" target="_blank" rel="noopener">融资证据 · cnstock.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 幻码跃迁 上海 量子计算系统级软件 / AI+量子 未披露 2026.07 种子 数千万元 量子计算系统级软件 / AI+量子 光源资本领投，云启资本、小苗朗程跟投"><tr><td>19</td><td rowspan="1"><div class="company">幻码跃迁</div></td><td rowspan="1" class="city">上海</td><td rowspan="1">量子计算系统级软件 / AI+量子</td><td rowspan="1" class="valuation">未披露</td><td rowspan="1" class="links"><a href="https://www.thecapital.com.cn/newsDetail/124126" target="_blank" rel="noopener">主营证据 · thecapital.com.cn</a></td><td>2026.07</td><td><span class="round">种子</span></td><td>光源资本领投，云启资本、小苗朗程跟投</td><td>数千万元</td><td class="links"><a href="https://www.thecapital.com.cn/newsDetail/124126" target="_blank" rel="noopener">融资证据 · thecapital.com.cn</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 和光量子 杭州 通用容错光量子计算系统 未披露 2026.07 天使 未披露 通用容错光量子计算系统 中赢创投"><tr><td>20</td><td rowspan="1"><div class="company">和光量子</div></td><td rowspan="1" class="city">杭州</td><td rowspan="1">通用容错光量子计算系统</td><td rowspan="1" class="valuation">未披露</td><td rowspan="1" class="links"><a href="https://new.qq.com/rain/a/20260727A04V4K00?refer=cp_1009" target="_blank" rel="noopener">主营证据 · new.qq.com</a></td><td>2026.07</td><td><span class="round">天使</span></td><td>中赢创投</td><td>未披露</td><td class="links"><a href="https://new.qq.com/rain/a/20260727A04V4K00?refer=cp_1009" target="_blank" rel="noopener">融资证据 · new.qq.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 玻色量子 北京 光量子计算 约65亿元（B轮后） 2026.07 Pre-IPO 数亿元 光量子计算 杭州产投、九智资本、元禾璞华、全新世、洪泰基金、君礼资本、招银国际、中银资本投控、元和资本、福州国资集团榕投资本联合投资 2026.03 B 10 亿 光量子计算 北京金控、工银资本、朝阳顺禧、招银国际、深投控、毅达资本"><tr><td>21</td><td rowspan="2"><div class="company">玻色量子</div></td><td rowspan="2" class="city">北京</td><td rowspan="2">光量子计算</td><td rowspan="2" class="valuation">约65亿元（B轮后）</td><td rowspan="2" class="links"><a href="https://www.chinastarmarket.cn/detail/2416345" target="_blank" rel="noopener">主营证据 · chinastarmarket.cn</a></td><td>2026.07</td><td><span class="round">Pre-IPO</span></td><td>杭州产投、九智资本、元禾璞华、全新世、洪泰基金、君礼资本、招银国际、中银资本投控、元和资本、福州国资集团榕投资本联合投资</td><td>数亿元</td><td class="links"><a href="https://www.chinastarmarket.cn/detail/2416345" target="_blank" rel="noopener">融资证据 · chinastarmarket.cn</a></td></tr><tr><td>22</td><td>2026.03</td><td><span class="round">B</span></td><td>北京金控、工银资本、朝阳顺禧、招银国际、深投控、毅达资本</td><td>10 亿</td><td class="links"><a href="https://cnews.chinadaily.com.cn/a/202604/01/WS69cc8ce7a310942cc49a5f09.html" target="_blank" rel="noopener">融资证据 · cnews.chinadaily.com.cn</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 相干科技 北京 超导量子计算 未披露 2026.06 Pre-A+ 数亿元 超导量子计算 北京市量子基金、普华资本 2026.02 Pre-A 数亿元 超导量子计算 天阳资本、普华资本"><tr><td>23</td><td rowspan="2"><div class="company">相干科技</div></td><td rowspan="2" class="city">北京</td><td rowspan="2">超导量子计算</td><td rowspan="2" class="valuation">未披露</td><td rowspan="2" class="links"><a href="http://www.puhuacapital.com/mobile/index.php/news/info/312" target="_blank" rel="noopener">主营证据 · puhuacapital.com</a></td><td>2026.06</td><td><span class="round">Pre-A+</span></td><td>北京市量子基金、普华资本</td><td>数亿元</td><td class="links"><a href="http://www.puhuacapital.com/mobile/index.php/news/info/312" target="_blank" rel="noopener">融资证据 · puhuacapital.com</a></td></tr><tr><td>24</td><td>2026.02</td><td><span class="round">Pre-A</span></td><td>天阳资本、普华资本</td><td>数亿元</td><td class="links"><a href="http://www.indexvc.com/service/trade/15002.html" target="_blank" rel="noopener">融资证据 · indexvc.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 太一量生 上海 中性原子（钕原子） 约15亿元 2026.06 Pre-A 3 亿 中性原子（钕原子） 高榕创投、IDG资本 2026.03 天使 数亿元 中性原子（钕原子） 上海未来产业基金、讯飞创投"><tr><td>25</td><td rowspan="2"><div class="company">太一量生</div></td><td rowspan="2" class="city">上海</td><td rowspan="2">中性原子（钕原子）</td><td rowspan="2" class="valuation">约15亿元</td><td rowspan="2" class="links"><a href="https://www.zhangtongshe.com/article/detail?id=101906" target="_blank" rel="noopener">主营证据 · zhangtongshe.com</a></td><td>2026.06</td><td><span class="round">Pre-A</span></td><td>高榕创投、IDG资本</td><td>3 亿</td><td class="links"><a href="https://www.zhangtongshe.com/article/detail?id=101906" target="_blank" rel="noopener">融资证据 · zhangtongshe.com</a></td></tr><tr><td>26</td><td>2026.03</td><td><span class="round">天使</span></td><td>上海未来产业基金、讯飞创投</td><td>数亿元</td><td class="links"><a href="https://jnz.cs.com.cn/app/html/jnz/116708.html" target="_blank" rel="noopener">融资证据 · jnz.cs.com.cn</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 量旋科技 深圳 超导 + 核磁 约110亿元（独角兽） 2026.06 D 10 亿 超导 + 核磁 中金资本、上海半导体产投、金浦投资、国中资本、四川兴川 2026.04 C+ 6 亿 超导 + 核磁 成都天创投、金鼎资本、财通资本、基石资本、国泰君安创新投资、华强资本、毅达资本 2026.01 C 数亿元 超导 + 核磁 隆利科技、凯易资本、恒泰华晟、毅达资本、青岛瀚潮、海南凯瑞"><tr><td>27</td><td rowspan="3"><div class="company">量旋科技</div></td><td rowspan="3" class="city">深圳</td><td rowspan="3">超导 + 核磁</td><td rowspan="3" class="valuation">约110亿元（独角兽）</td><td rowspan="3" class="links"><a href="https://new.qq.com/rain/a/20260630A07QP700?refer=cp_1009" target="_blank" rel="noopener">主营证据 · new.qq.com</a></td><td>2026.06</td><td><span class="round">D</span></td><td>中金资本、上海半导体产投、金浦投资、国中资本、四川兴川</td><td>10 亿</td><td class="links"><a href="https://new.qq.com/rain/a/20260630A07QP700?refer=cp_1009" target="_blank" rel="noopener">融资证据 · new.qq.com</a></td></tr><tr><td>28</td><td>2026.04</td><td><span class="round">C+</span></td><td>成都天创投、金鼎资本、财通资本、基石资本、国泰君安创新投资、华强资本、毅达资本</td><td>6 亿</td><td class="links"><a href="https://www.news.cn/digital/20260403/45653cf4010a4381a08b371aab5e6432/c.html" target="_blank" rel="noopener">融资证据 · news.cn</a></td></tr><tr><td>29</td><td>2026.01</td><td><span class="round">C</span></td><td>隆利科技、凯易资本、恒泰华晟、毅达资本、青岛瀚潮、海南凯瑞</td><td>数亿元</td><td class="links"><a href="https://fgw.sz.gov.cn/ztzl/qtztzl/szscjmyjjfzzhfwpt/mqfc/myqyfzdt/content/post_12623809.html" target="_blank" rel="noopener">融资证据 · fgw.sz.gov.cn</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 量坤科技 北京 量子计算 未披露 2026.06 天使 数亿元 量子计算 英诺基金、水木清华校友种子基金、北工投资、基石创投、红杉中国、百度风投、启鸿投资、启迪裕麟投资"><tr><td>30</td><td rowspan="1"><div class="company">量坤科技</div></td><td rowspan="1" class="city">北京</td><td rowspan="1">量子计算</td><td rowspan="1" class="valuation">未披露</td><td rowspan="1" class="links"><a href="https://finance.sina.com.cn/stock/t/2026-06-01/doc-inhzwisx2621741.shtml" target="_blank" rel="noopener">主营证据 · finance.sina.com.cn</a></td><td>2026.06</td><td><span class="round">天使</span></td><td>英诺基金、水木清华校友种子基金、北工投资、基石创投、红杉中国、百度风投、启鸿投资、启迪裕麟投资</td><td>数亿元</td><td class="links"><a href="https://finance.sina.com.cn/stock/t/2026-06-01/doc-inhzwisx2621741.shtml" target="_blank" rel="noopener">融资证据 · finance.sina.com.cn</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 华翊量子 北京 离子阱量子计算 约50亿元 2026.06 A+ 未披露 离子阱量子计算 建投投资领投，中信建投投资、百度风投等老股东持续追加"><tr><td>31</td><td rowspan="1"><div class="company">华翊量子</div></td><td rowspan="1" class="city">北京</td><td rowspan="1">离子阱量子计算</td><td rowspan="1" class="valuation">约50亿元</td><td rowspan="1" class="links"><a href="https://kfqgw.beijing.gov.cn/cxyzkfq/cxcg/202606/t20260605_4687509.html" target="_blank" rel="noopener">主营证据 · kfqgw.beijing.gov.cn</a></td><td>2026.06</td><td><span class="round">A+</span></td><td>建投投资领投，中信建投投资、百度风投等老股东持续追加</td><td>未披露</td><td class="links"><a href="https://kfqgw.beijing.gov.cn/cxyzkfq/cxcg/202606/t20260605_4687509.html" target="_blank" rel="noopener">融资证据 · kfqgw.beijing.gov.cn</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 伏曦量子 上海 量子应用算法与平台 未披露 2026.06 天使 / 天使+ 未披露 量子应用算法与平台 宁德时代、小苗朗程、五源资本、德迅投资、慕华科创、启盈同创"><tr><td>32</td><td rowspan="1"><div class="company">伏曦量子</div></td><td rowspan="1" class="city">上海</td><td rowspan="1">量子应用算法与平台</td><td rowspan="1" class="valuation">未披露</td><td rowspan="1" class="links"><a href="https://view.inews.qq.com/a/20260622A05A8H00" target="_blank" rel="noopener">主营证据 · view.inews.qq.com</a></td><td>2026.06</td><td><span class="round">天使 / 天使+</span></td><td>宁德时代、小苗朗程、五源资本、德迅投资、慕华科创、启盈同创</td><td>未披露</td><td class="links"><a href="https://view.inews.qq.com/a/20260622A05A8H00" target="_blank" rel="noopener">融资证据 · view.inews.qq.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 本源量子 合肥 超导量子计算 约210亿元（Pre-IPO投前） 2026.06 Pre-IPO 30 亿 超导量子计算 由中国兵器集团领投"><tr><td>33</td><td rowspan="1"><div class="company">本源量子</div></td><td rowspan="1" class="city">合肥</td><td rowspan="1">超导量子计算</td><td rowspan="1" class="valuation">约210亿元（Pre-IPO投前）</td><td rowspan="1" class="links"><a href="https://originqc.com.cn/index.html?type=pyqpanda" target="_blank" rel="noopener">主营证据 · originqc.com.cn</a></td><td>2026.06</td><td><span class="round">Pre-IPO</span></td><td>由中国兵器集团领投</td><td>30 亿</td><td class="links"><a href="https://finance.sina.com.cn/tech/roll/2026-06-08/doc-iniasfpu5680157.shtml" target="_blank" rel="noopener">融资证据 · finance.sina.com.cn</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 无问清芯 杭州 中性原子量子计算 未披露 2026.05 天使 数千万 中性原子量子计算 杭州杭高实业"><tr><td>34</td><td rowspan="1"><div class="company">无问清芯</div></td><td rowspan="1" class="city">杭州</td><td rowspan="1">中性原子量子计算</td><td rowspan="1" class="valuation">未披露</td><td rowspan="1" class="links"><a href="https://business.china.com.cn/2026-05/09/content_43422402.shtml" target="_blank" rel="noopener">主营证据 · business.china.com.cn</a></td><td>2026.05</td><td><span class="round">天使</span></td><td>杭州杭高实业</td><td>数千万</td><td class="links"><a href="https://business.china.com.cn/2026-05/09/content_43422402.shtml" target="_blank" rel="noopener">融资证据 · business.china.com.cn</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 维刻量光 北京 离子阱（QCCD） 未披露 2026.05 天使 未披露 离子阱（QCCD） 小苗朗程"><tr><td>35</td><td rowspan="1"><div class="company">维刻量光</div></td><td rowspan="1" class="city">北京</td><td rowspan="1">离子阱（QCCD）</td><td rowspan="1" class="valuation">未披露</td><td rowspan="1" class="links"><a href="https://eu.36kr.com/zh/p/3805641110511367" target="_blank" rel="noopener">主营证据 · eu.36kr.com</a></td><td>2026.05</td><td><span class="round">天使</span></td><td>小苗朗程</td><td>未披露</td><td class="links"><a href="https://eu.36kr.com/zh/p/3805641110511367" target="_blank" rel="noopener">融资证据 · eu.36kr.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 矩量光启 上海 超导量子计算 未披露 2026.05 天使 2 亿 超导量子计算 和利资本、钧山资本联合领投，中芯聚源、翌昕投资等产业方加持，翊荣资本跟投，千乘资本、德同资本等老股东追加 2026.04 种子 未披露 超导量子计算 千乘资本与德同资本联合投资"><tr><td>36</td><td rowspan="2"><div class="company">矩量光启</div></td><td rowspan="2" class="city">上海</td><td rowspan="2">超导量子计算</td><td rowspan="2" class="valuation">未披露</td><td rowspan="2" class="links"><a href="https://www.news.cn/liangzi/20260518/fb5fcfdcd04944edbdb1790836a1b667/c.html" target="_blank" rel="noopener">主营证据 · news.cn</a></td><td>2026.05</td><td><span class="round">天使</span></td><td>和利资本、钧山资本联合领投，中芯聚源、翌昕投资等产业方加持，翊荣资本跟投，千乘资本、德同资本等老股东追加</td><td>2 亿</td><td class="links"><a href="https://www.news.cn/liangzi/20260518/fb5fcfdcd04944edbdb1790836a1b667/c.html" target="_blank" rel="noopener">融资证据 · news.cn</a></td></tr><tr><td>37</td><td>2026.04</td><td><span class="round">种子</span></td><td>千乘资本与德同资本联合投资</td><td>未披露</td><td class="links"><a href="https://www.bjnews.com.cn/detail/1775796405129164.html" target="_blank" rel="noopener">融资证据 · bjnews.com.cn</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 图灵量子 上海 光量子计算 约70亿元 2026.04 战略投资 / 新一轮 数亿元 光量子计算 浦东创投、海望资本、国家创业投资引导基金长三角基金、达晨财智 2026.01 B 数亿元 光量子计算 四川省产业振兴集团、投控东海、复星资本、商汤科技"><tr><td>38</td><td rowspan="2"><div class="company">图灵量子</div></td><td rowspan="2" class="city">上海</td><td rowspan="2">光量子计算</td><td rowspan="2" class="valuation">约70亿元</td><td rowspan="2" class="links"><a href="https://new.qq.com/rain/a/20260427A02QWM00" target="_blank" rel="noopener">主营证据 · new.qq.com</a></td><td>2026.04</td><td><span class="round">战略投资 / 新一轮</span></td><td>浦东创投、海望资本、国家创业投资引导基金长三角基金、达晨财智</td><td>数亿元</td><td class="links"><a href="https://new.qq.com/rain/a/20260427A02QWM00" target="_blank" rel="noopener">融资证据 · new.qq.com</a></td></tr><tr><td>39</td><td>2026.01</td><td><span class="round">B</span></td><td>四川省产业振兴集团、投控东海、复星资本、商汤科技</td><td>数亿元</td><td class="links"><a href="https://legendstar.com.cn/news/475038618529227474?lang=en" target="_blank" rel="noopener">融资证据 · legendstar.com.cn</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 中器无量 上海 中性原子量子计算 约50亿元 2026.01 天使 未披露 中性原子量子计算 蓝驰创投、上海未来产业基金、中科神光、峰瑞资本、水木清华校友种子基金、小苗朗程、联想之星、中科创星、复旦科创"><tr><td>40</td><td rowspan="1"><div class="company">中器无量</div></td><td rowspan="1" class="city">上海</td><td rowspan="1">中性原子量子计算</td><td rowspan="1" class="valuation">约50亿元</td><td rowspan="1" class="links"><a href="https://shanghai.gov.cn/nw4411/20260608/5f6c641b15f24c3386408fa9a58733c1.html" target="_blank" rel="noopener">主营证据 · shanghai.gov.cn</a></td><td>2026.01</td><td><span class="round">天使</span></td><td>蓝驰创投、上海未来产业基金、中科神光、峰瑞资本、水木清华校友种子基金、小苗朗程、联想之星、中科创星、复旦科创</td><td>未披露</td><td class="links"><a href="https://aiqicha.baidu.com/company_fundInformation_58006613543204" target="_blank" rel="noopener">融资证据 · aiqicha.baidu.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 中科酷原 武汉 中性原子量子计算 未披露 2026.01 战略投资 近亿元 中性原子量子计算 中移创新产业基金（中国移动）"><tr><td>41</td><td rowspan="1"><div class="company">中科酷原</div></td><td rowspan="1" class="city">武汉</td><td rowspan="1">中性原子量子计算</td><td rowspan="1" class="valuation">未披露</td><td rowspan="1" class="links"><a href="http://www.cnstock.com/commonDetail/620136" target="_blank" rel="noopener">主营证据 · cnstock.com</a></td><td>2026.01</td><td><span class="round">战略投资</span></td><td>中移创新产业基金（中国移动）</td><td>近亿元</td><td class="links"><a href="http://www.cnstock.com/commonDetail/620136" target="_blank" rel="noopener">融资证据 · cnstock.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 微观纪元 合肥 量子计算 未披露 2026.01 A 近亿元 量子计算 容亿投资领投，尖晶资本与个人投资者牛金波共同参与"><tr><td>42</td><td rowspan="1"><div class="company">微观纪元</div></td><td rowspan="1" class="city">合肥</td><td rowspan="1">量子计算</td><td rowspan="1" class="valuation">未披露</td><td rowspan="1" class="links"><a href="https://www.163.com/dy/article/KJPPA31T05118HJE.html" target="_blank" rel="noopener">主营证据 · 163.com</a></td><td>2026.01</td><td><span class="round">A</span></td><td>容亿投资领投，尖晶资本与个人投资者牛金波共同参与</td><td>近亿元</td><td class="links"><a href="https://www.163.com/dy/article/KJPPA31T05118HJE.html" target="_blank" rel="noopener">融资证据 · 163.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="核心量子计算企业 奇算光启 上海 光量子计算机研发 / 光子芯片 / 量子硬件优化与 AI 算法协同 未披露 2026.01 天使 未披露 光量子计算机研发 / 光子芯片 / 量子硬件优化与 AI 算法协同 百度风投、高瓴创投、张江浩成"><tr><td>43</td><td rowspan="1"><div class="company">奇算光启</div></td><td rowspan="1" class="city">上海</td><td rowspan="1">光量子计算机研发 / 光子芯片 / 量子硬件优化与 AI 算法协同</td><td rowspan="1" class="valuation">未披露</td><td rowspan="1" class="links"><a href="https://www.163.com/dy/article/KIP7993O0550B1DU.html" target="_blank" rel="noopener">主营证据 · 163.com</a></td><td>2026.01</td><td><span class="round">天使</span></td><td>百度风投、高瓴创投、张江浩成</td><td>未披露</td><td class="links"><a href="https://www.163.com/dy/article/KIP7993O0550B1DU.html" target="_blank" rel="noopener">融资证据 · 163.com</a></td></tr></tbody>
+        </table>
+      </div>
+    </section>
+    <section class="section-card">
+      <div class="section-head">
+        <h2 class="section-title">产业链边界企业</h2>
+        <div class="section-meta">7 家企业 · 10 条融资记录</div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:60px;">序号</th>
+              <th style="width:130px;">企业</th>
+              <th style="width:80px;">所在地</th>
+              <th style="width:300px;">主营业务</th>
+              <th style="width:140px;">当前估值</th>
+              <th style="width:160px;">主营证据</th>
+              <th style="width:100px;">融资时间</th>
+              <th style="width:110px;">轮次</th>
+              <th style="width:260px;">资方代表</th>
+              <th style="width:100px;">金额</th>
+              <th style="width:160px;">融资证据</th>
+            </tr>
+          </thead>
+          <tbody class="company-group group-start" data-search="产业链边界企业 太微量子 合肥 中性原子与离子阱赛道上游核心零部件 / 量子实验标准化设备 未披露 2026.06 天使 未披露 中性原子与离子阱赛道上游核心零部件 / 量子实验标准化设备 英诺天使、东方嘉富、小苗朗程、云启资本、水木投资、远东远至"><tr><td>44</td><td rowspan="1"><div class="company">太微量子</div></td><td rowspan="1" class="city">合肥</td><td rowspan="1">中性原子与离子阱赛道上游核心零部件 / 量子实验标准化设备</td><td rowspan="1" class="valuation">未披露</td><td rowspan="1" class="links"><a href="http://shangdaovc.icoc.me/h-nd-14198.html" target="_blank" rel="noopener">主营证据 · shangdaovc.icoc.me</a></td><td>2026.06</td><td><span class="round">天使</span></td><td>英诺天使、东方嘉富、小苗朗程、云启资本、水木投资、远东远至</td><td>未披露</td><td class="links"><a href="http://shangdaovc.icoc.me/h-nd-14198.html" target="_blank" rel="noopener">融资证据 · shangdaovc.icoc.me</a></td></tr></tbody><tbody class="company-group group-start" data-search="产业链边界企业 国光量子 北京 光量子芯片 / 量子通信 / 量子安全 / 量子计算等量子技术产业化（边界说明：业务覆盖量子安全、量子精密测量与量子计算，量子计算并非唯一主线） 未披露 业务覆盖量子安全、量子精密测量与量子计算，量子计算并非唯一主线 2026.05 A+ 未披露 光量子芯片 / 量子通信 / 量子安全 / 量子计算等量子技术产业化 金冠电气股份有限公司 2026.04 A 近亿元 光量子芯片 / 量子通信 / 量子安全 / 量子计算等量子技术产业化 广东纬德信息科技股份有限公司、新华联集团"><tr><td>45</td><td rowspan="2"><div class="company">国光量子</div></td><td rowspan="2" class="city">北京</td><td rowspan="2">光量子芯片 / 量子通信 / 量子安全 / 量子计算等量子技术产业化（边界说明：业务覆盖量子安全、量子精密测量与量子计算，量子计算并非唯一主线）</td><td rowspan="2" class="valuation">未披露</td><td rowspan="2" class="links"><a href="https://www.xinhuanet.com/liangzi/20260724/4fad14d7b3504e5786a344fb1aaaed4c/c.html" target="_blank" rel="noopener">主营证据 · xinhuanet.com</a></td><td>2026.05</td><td><span class="round">A+</span></td><td>金冠电气股份有限公司</td><td>未披露</td><td class="links"><a href="https://finance.sina.cn/2026-05-15/detail-inhxyimn6544371.d.html" target="_blank" rel="noopener">融资证据 · finance.sina.cn</a></td></tr><tr><td>46</td><td>2026.04</td><td><span class="round">A</span></td><td>广东纬德信息科技股份有限公司、新华联集团</td><td>近亿元</td><td class="links"><a href="https://www.163.com/dy/article/KQITFR3P05568W0A.html" target="_blank" rel="noopener">融资证据 · 163.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="产业链边界企业 中微达信 成都 量子计算测控系统 / 量子测量技术 未披露 2026.04 A+ 数千万元 量子计算测控系统 / 量子测量技术 成都科创投资集团"><tr><td>47</td><td rowspan="1"><div class="company">中微达信</div></td><td rowspan="1" class="city">成都</td><td rowspan="1">量子计算测控系统 / 量子测量技术</td><td rowspan="1" class="valuation">未披露</td><td rowspan="1" class="links"><a href="https://www.cdcyjt.com/news-view.thtml?cid=78507&amp;pn=&amp;t=334" target="_blank" rel="noopener">主营证据 · cdcyjt.com</a></td><td>2026.04</td><td><span class="round">A+</span></td><td>成都科创投资集团</td><td>数千万元</td><td class="links"><a href="https://www.cdcyjt.com/news-view.thtml?cid=78507&amp;pn=&amp;t=334" target="_blank" rel="noopener">融资证据 · cdcyjt.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="产业链边界企业 正则量子 北京 光量子计算（边界说明：除光量子计算外，公开材料也较多涉及量子安全等复合业务） 未披露 除光量子计算外，公开材料也较多涉及量子安全等复合业务 2026.04 Pre-A+ 未披露 光量子计算 亿宸资本 2026.01 Pre-A 数千万 光量子计算 海愿资本"><tr><td>48</td><td rowspan="2"><div class="company">正则量子</div></td><td rowspan="2" class="city">北京</td><td rowspan="2">光量子计算（边界说明：除光量子计算外，公开材料也较多涉及量子安全等复合业务）</td><td rowspan="2" class="valuation">未披露</td><td rowspan="2" class="links"><a href="https://m.bjnews.com.cn/detail/1782556538129237.html" target="_blank" rel="noopener">主营证据 · m.bjnews.com.cn</a></td><td>2026.04</td><td><span class="round">Pre-A+</span></td><td>亿宸资本</td><td>未披露</td><td class="links"><a href="https://m.qixin.com/company/4180b981-28f8-4a02-a8d5-21e55576b4f9" target="_blank" rel="noopener">融资证据 · m.qixin.com</a></td></tr><tr><td>49</td><td>2026.01</td><td><span class="round">Pre-A</span></td><td>海愿资本</td><td>数千万</td><td class="links"><a href="https://www.zhangtongshe.com/article/detail?id=101504" target="_blank" rel="noopener">融资证据 · zhangtongshe.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="产业链边界企业 赋同量子 嘉兴 超导单光子探测器 / 量子计算与量子光学上游器件 未披露 2026.04 A 未披露 超导单光子探测器 / 量子计算与量子光学上游器件 新鼎资本"><tr><td>50</td><td rowspan="1"><div class="company">赋同量子</div></td><td rowspan="1" class="city">嘉兴</td><td rowspan="1">超导单光子探测器 / 量子计算与量子光学上游器件</td><td rowspan="1" class="valuation">未披露</td><td rowspan="1" class="links"><a href="https://m.10jqka.com.cn/20260312/c675253083.shtml" target="_blank" rel="noopener">主营证据 · m.10jqka.com.cn</a></td><td>2026.04</td><td><span class="round">A</span></td><td>新鼎资本</td><td>未披露</td><td class="links"><a href="https://www.163.com/dy/article/KR2H5KQ7051984TV.html" target="_blank" rel="noopener">融资证据 · 163.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="产业链边界企业 伊辛智能 北京 光电伊辛机 / 量子启发式优化计算（边界说明：核心产品是光电伊辛机，属于量子启发式/类量子专用计算） 未披露 核心产品是光电伊辛机，属于量子启发式/类量子专用计算 2026.03 A 未披露 光电伊辛机 / 量子启发式优化计算 深智城产投、顺禧基金 2026.01 Pre-A 未披露 光电伊辛机 / 量子启发式优化计算 达晨财智、水木创投、广州产投、深智城产投"><tr><td>51</td><td rowspan="2"><div class="company">伊辛智能</div></td><td rowspan="2" class="city">北京</td><td rowspan="2">光电伊辛机 / 量子启发式优化计算（边界说明：核心产品是光电伊辛机，属于量子启发式/类量子专用计算）</td><td rowspan="2" class="valuation">未披露</td><td rowspan="2" class="links"><a href="https://www.howbuy.com/opinion/simu/2026-05-07/123931.html" target="_blank" rel="noopener">主营证据 · howbuy.com</a></td><td>2026.03</td><td><span class="round">A</span></td><td>深智城产投、顺禧基金</td><td>未披露</td><td class="links"><a href="https://www.howbuy.com/opinion/simu/2026-05-07/123931.html" target="_blank" rel="noopener">融资证据 · howbuy.com</a></td></tr><tr><td>52</td><td>2026.01</td><td><span class="round">Pre-A</span></td><td>达晨财智、水木创投、广州产投、深智城产投</td><td>未披露</td><td class="links"><a href="https://new.qq.com/rain/a/20260107A05W3Z00?refer=cp_1009" target="_blank" rel="noopener">融资证据 · new.qq.com</a></td></tr></tbody><tbody class="company-group group-start" data-search="产业链边界企业 中科源芯 北京 光电子器件 / 光量子相关器件与产业链配套 未披露 2026.01 Pre-A 数千万元 光电子器件 / 光量子相关器件与产业链配套 源禾资本"><tr><td>53</td><td rowspan="1"><div class="company">中科源芯</div></td><td rowspan="1" class="city">北京</td><td rowspan="1">光电子器件 / 光量子相关器件与产业链配套</td><td rowspan="1" class="valuation">未披露</td><td rowspan="1" class="links"><a href="https://www.jixin.tech/mobile/show.php?classid=1&amp;id=6870" target="_blank" rel="noopener">主营证据 · jixin.tech</a></td><td>2026.01</td><td><span class="round">Pre-A</span></td><td>源禾资本</td><td>数千万元</td><td class="links"><a href="https://www.163.com/dy/article/KJE0H5EB0550B1DU.html" target="_blank" rel="noopener">融资证据 · 163.com</a></td></tr></tbody>
+        </table>
+      </div>
+    </section>
+    <div id="empty" class="empty">当前筛选条件下没有匹配到企业。</div>
+
+    <hr class="divider">
+
+    <section class="hero">
+      <h1>国内量子计算新增企业清单</h1>
+      <p class="subtitle">整理日期：2026-08-18&nbsp;&nbsp;|&nbsp;&nbsp;数据来源：天眼查、爱企查、36氪、财联社、新浪财经、知乎等公开信息交叉核实<br>统计口径：2024年及之后成立的国内量子计算企业，融资轮次不限</p>
+    </section>
+
+    <section class="stats" style="grid-template-columns:repeat(4,minmax(0,1fr));">
+      <div class="summary-card"><div class="label">新增企业总数</div><div class="value" style="color:#0f6e56;">18</div></div>
+      <div class="summary-card"><div class="label">技术路线</div><div class="value" style="color:#185fa5;">5</div></div>
+      <div class="summary-card"><div class="label">已获融资</div><div class="value" style="color:#0f6e56;">12</div></div>
+      <div class="summary-card"><div class="label">在途/未融资</div><div class="value" style="color:#854f0b;">6</div></div>
+    </section>
+
+    <section class="section-card">
+      <div class="section-head">
+        <h2 class="section-title">按成立年份统计</h2>
+        <div class="section-meta">2024-2026年新增企业技术路线分布</div>
+      </div>
+      <div class="table-wrap">
+        <table style="min-width:760px;">
+          <thead>
+            <tr>
+              <th style="width:100px;">成立年份</th>
+              <th style="width:80px;">企业数</th>
+              <th style="width:80px;">超导</th>
+              <th style="width:80px;">中性原子</th>
+              <th style="width:80px;">光量子</th>
+              <th style="width:80px;">离子阱</th>
+              <th style="width:80px;">拓扑</th>
+              <th style="width:80px;">AI融合</th>
+              <th style="width:100px;">路线未明确</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="year-cell">2024</td><td class="year-num">3</td><td class="year-num" style="color:#185fa5;">1</td><td class="year-num" style="color:#0f6e56;">1</td><td class="year-num" style="color:#854f0b;">1</td><td class="year-num">0</td><td class="year-num">0</td><td class="year-num">0</td><td class="year-num">0</td></tr>
+            <tr><td class="year-cell">2025</td><td class="year-num">5</td><td class="year-num" style="color:#185fa5;">2</td><td class="year-num" style="color:#0f6e56;">3</td><td class="year-num">0</td><td class="year-num">0</td><td class="year-num">0</td><td class="year-num">0</td><td class="year-num">0</td></tr>
+            <tr><td class="year-cell">2026</td><td class="year-num">10</td><td class="year-num" style="color:#185fa5;">2</td><td class="year-num" style="color:#0f6e56;">4</td><td class="year-num">0</td><td class="year-num" style="color:#534ab7;">1</td><td class="year-num" style="color:#993c1d;">1</td><td class="year-num">1</td><td class="year-num">1</td></tr>
+            <tr style="font-weight:700;background:#f3f7ff;"><td class="year-cell">合计</td><td class="year-num">18</td><td class="year-num" style="color:#185fa5;">5</td><td class="year-num" style="color:#0f6e56;">8</td><td class="year-num" style="color:#854f0b;">1</td><td class="year-num" style="color:#534ab7;">1</td><td class="year-num" style="color:#993c1d;">1</td><td class="year-num">1</td><td class="year-num">1</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="conclusion-box">
+      <strong>关键结论：</strong>2024-2026年新增量子计算企业共18家，中性原子8家位居第一，超导5家第二。中性原子路线增长最快：2024年1家→2025年3家→2026年4家，逐年递增。2026年新建企业中，中性原子4家已超过超导的2家。
+    </div>
+
+    <section class="section-card">
+      <div class="section-head">
+        <h2 class="section-title">超导量子计算<span class="route-label tag tag-blue">5家</span></h2>
+        <div class="section-meta">5 家企业</div>
+      </div>
+      <div class="table-wrap">
+        <table style="min-width:1000px;">
+          <thead>
+            <tr>
+              <th style="width:130px;">企业</th>
+              <th style="width:180px;">创始人</th>
+              <th style="width:100px;">成立时间</th>
+              <th style="width:150px;">第一笔融资</th>
+              <th style="width:150px;">最新轮次</th>
+              <th style="width:220px;">融资状态</th>
+              <th style="width:140px;">证据来源</th>
+            </tr>
+          </thead>
+          <tbody class="company-group group-start" data-search="超导量子计算 季轴科技 施尧耘 2024.01 — — ⚠️ 41项专利，未见融资 天眼查">
+            <tr><td><div class="company">季轴科技</div></td><td>施尧耘</td><td>2024.01</td><td>—</td><td>—</td><td><span class="tag tag-amber">⚠️ 41项专利，未见融资</span></td><td class="links"><a href="https://www.tianyancha.com/" target="_blank" rel="noopener">天眼查</a></td></tr>
+          </tbody>
+          <tbody class="company-group" data-search="超导量子计算 国基量子 陆军（中电科体系） 2025.01 — — ⚠️ 央企背景，在途 爱企查">
+            <tr><td><div class="company">国基量子</div></td><td>陆军（中电科体系）</td><td>2025.01</td><td>—</td><td>—</td><td><span class="tag tag-amber">⚠️ 央企背景，在途</span></td><td class="links"><a href="https://aiqicha.baidu.com/" target="_blank" rel="noopener">爱企查</a></td></tr>
+          </tbody>
+          <tbody class="company-group" data-search="超导量子计算 矩量光启 于文龙 2025 2026.04 种子轮 2026.05 天使轮 ✅ 2亿 公开报道">
+            <tr><td><div class="company">矩量光启</div></td><td>于文龙</td><td>2025</td><td>2026.04 种子轮</td><td>2026.05 天使轮</td><td><span class="tag tag-teal">✅ 2亿</span></td><td class="links">公开报道</td></tr>
+          </tbody>
+          <tbody class="company-group" data-search="超导量子计算 芯跃迁科技 于海峰（持股10%） 2026.04 — — ⚠️ 法人薛光明，未见融资 天眼查">
+            <tr><td><div class="company">芯跃迁科技</div></td><td>于海峰（持股10%）</td><td>2026.04</td><td>—</td><td>—</td><td><span class="tag tag-amber">⚠️ 法人薛光明，未见融资</span></td><td class="links"><a href="https://www.tianyancha.com/" target="_blank" rel="noopener">天眼查</a></td></tr>
+          </tbody>
+          <tbody class="company-group" data-search="超导量子计算 正元量子 郑亚锐（前腾讯量子） 2026.02 — — ⚠️ 3D架构上游，未见融资 天眼查">
+            <tr><td><div class="company">正元量子</div></td><td>郑亚锐（前腾讯量子）</td><td>2026.02</td><td>—</td><td>—</td><td><span class="tag tag-amber">⚠️ 3D架构上游，未见融资</span></td><td class="links"><a href="https://www.tianyancha.com/" target="_blank" rel="noopener">天眼查</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <div class="section-head">
+        <h2 class="section-title">中性原子量子计算<span class="route-label tag tag-teal">8家（第一路线）</span></h2>
+        <div class="section-meta">8 家企业</div>
+      </div>
+      <div class="table-wrap">
+        <table style="min-width:1000px;">
+          <thead>
+            <tr>
+              <th style="width:130px;">企业</th>
+              <th style="width:180px;">创始人</th>
+              <th style="width:100px;">成立时间</th>
+              <th style="width:150px;">第一笔融资</th>
+              <th style="width:150px;">最新轮次</th>
+              <th style="width:220px;">融资状态</th>
+              <th style="width:140px;">证据来源</th>
+            </tr>
+          </thead>
+          <tbody class="company-group group-start" data-search="中性原子量子计算 两仪万象 翟荟 2024 2026.04 A轮 2026.07 A+轮 ✅ 两轮均数亿元 公开报道">
+            <tr><td><div class="company">两仪万象</div></td><td>翟荟</td><td>2024</td><td>2026.04 A轮</td><td>2026.07 A+轮</td><td><span class="tag tag-teal">✅ 两轮均数亿元</span></td><td class="links">公开报道</td></tr>
+          </tbody>
+          <tbody class="company-group" data-search="中性原子量子计算 中器无量 吕旭东 2025 — — ⚠️ 在途 天眼查">
+            <tr><td><div class="company">中器无量</div></td><td>吕旭东</td><td>2025</td><td>—</td><td>—</td><td><span class="tag tag-amber">⚠️ 在途</span></td><td class="links">天眼查</td></tr>
+          </tbody>
+          <tbody class="company-group" data-search="中性原子量子计算 原子矩阵 夏席远 2025 2026.03 天使轮 2026.05 A轮 ✅ 天使未披露+A轮数亿 公开报道">
+            <tr><td><div class="company">原子矩阵</div></td><td>夏席远</td><td>2025</td><td>2026.03 天使轮</td><td>2026.05 A轮</td><td><span class="tag tag-teal">✅ 天使未披露+A轮数亿</span></td><td class="links">公开报道</td></tr>
+          </tbody>
+          <tbody class="company-group" data-search="中性原子量子计算 不筹量子 李晓鹏 2025.08 2025.12 天使轮 2026.08 A轮 ✅ 累计近10亿 同花顺">
+            <tr><td><div class="company">不筹量子</div></td><td>李晓鹏</td><td>2025.08</td><td>2025.12 天使轮</td><td>2026.08 A轮</td><td><span class="tag tag-teal">✅ 累计近10亿</span></td><td class="links"><a href="https://m.10jqka.com.cn/20260814/c678977472.shtml" target="_blank" rel="noopener">同花顺</a></td></tr>
+          </tbody>
+          <tbody class="company-group" data-search="中性原子量子计算 太一量生 刘弘斌/方正浩 2026.01 2026.03 天使轮 2026.06 Pre-A轮 ✅ 天使数亿+Pre-A 3亿 公开报道">
+            <tr><td><div class="company">太一量生</div></td><td>刘弘斌/方正浩</td><td>2026.01</td><td>2026.03 天使轮</td><td>2026.06 Pre-A轮</td><td><span class="tag tag-teal">✅ 天使数亿+Pre-A 3亿</span></td><td class="links">公开报道</td></tr>
+          </tbody>
+          <tbody class="company-group" data-search="中性原子量子计算 无问清芯 许一力 2026.03 2026.05 天使轮 2026.05 天使轮 ✅ 数千万 公开报道">
+            <tr><td><div class="company">无问清芯</div></td><td>许一力</td><td>2026.03</td><td>2026.05 天使轮</td><td>2026.05 天使轮</td><td><span class="tag tag-teal">✅ 数千万</span></td><td class="links">公开报道</td></tr>
+          </tbody>
+          <tbody class="company-group" data-search="中性原子量子计算 原芯量子 栾兴生 2026 — — ⚠️ 在途 知乎产业跟踪">
+            <tr><td><div class="company">原芯量子</div></td><td>栾兴生</td><td>2026</td><td>—</td><td>—</td><td><span class="tag tag-amber">⚠️ 在途</span></td><td class="links">知乎产业跟踪</td></tr>
+          </tbody>
+          <tbody class="company-group" data-search="中性原子量子计算 向量奇点 — 2026.05 2026.08 天使轮 2026.08 天使轮 ✅ 超亿元（IDG领投） 亿欧">
+            <tr><td><div class="company">向量奇点</div></td><td>—</td><td>2026.05</td><td>2026.08 天使轮</td><td>2026.08 天使轮</td><td><span class="tag tag-teal">✅ 超亿元（IDG领投）</span></td><td class="links"><a href="http://view.inews.qq.com/a/20260815A02GLG00" target="_blank" rel="noopener">亿欧</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <div class="section-head">
+        <h2 class="section-title">光量子计算<span class="route-label tag tag-amber">1家</span></h2>
+        <div class="section-meta">1 家企业</div>
+      </div>
+      <div class="table-wrap">
+        <table style="min-width:1000px;">
+          <thead>
+            <tr>
+              <th style="width:130px;">企业</th>
+              <th style="width:180px;">创始人</th>
+              <th style="width:100px;">成立时间</th>
+              <th style="width:150px;">第一笔融资</th>
+              <th style="width:150px;">最新轮次</th>
+              <th style="width:220px;">融资状态</th>
+              <th style="width:140px;">证据来源</th>
+            </tr>
+          </thead>
+          <tbody class="company-group group-start" data-search="光量子计算 奇算光启 钟翰森 2024.01 2026.01 天使轮 2026.01 天使轮 ⚠️ 未披露金额 公开报道">
+            <tr><td><div class="company">奇算光启</div></td><td>钟翰森</td><td>2024.01</td><td>2026.01 天使轮</td><td>2026.01 天使轮</td><td><span class="tag tag-amber">⚠️ 未披露金额</span></td><td class="links">公开报道</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <div class="section-head">
+        <h2 class="section-title">离子阱量子计算<span class="route-label tag tag-purple">1家</span></h2>
+        <div class="section-meta">1 家企业</div>
+      </div>
+      <div class="table-wrap">
+        <table style="min-width:1000px;">
+          <thead>
+            <tr>
+              <th style="width:130px;">企业</th>
+              <th style="width:180px;">创始人</th>
+              <th style="width:100px;">成立时间</th>
+              <th style="width:150px;">第一笔融资</th>
+              <th style="width:150px;">最新轮次</th>
+              <th style="width:220px;">融资状态</th>
+              <th style="width:140px;">证据来源</th>
+            </tr>
+          </thead>
+          <tbody class="company-group group-start" data-search="离子阱量子计算 维刻量光 欧凌峰 2026.05 2026.05 天使轮 2026.05 天使轮 ⚠️ 未披露金额 公开报道">
+            <tr><td><div class="company">维刻量光</div></td><td>欧凌峰</td><td>2026.05</td><td>2026.05 天使轮</td><td>2026.05 天使轮</td><td><span class="tag tag-amber">⚠️ 未披露金额</span></td><td class="links">公开报道</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <div class="section-head">
+        <h2 class="section-title">拓扑量子计算<span class="route-label tag tag-coral">1家（国内唯一）</span></h2>
+        <div class="section-meta">1 家企业</div>
+      </div>
+      <div class="table-wrap">
+        <table style="min-width:1000px;">
+          <thead>
+            <tr>
+              <th style="width:130px;">企业</th>
+              <th style="width:180px;">创始人</th>
+              <th style="width:100px;">成立时间</th>
+              <th style="width:150px;">第一笔融资</th>
+              <th style="width:150px;">最新轮次</th>
+              <th style="width:220px;">融资状态</th>
+              <th style="width:140px;">证据来源</th>
+            </tr>
+          </thead>
+          <tbody class="company-group group-start" data-search="拓扑量子计算 铁马量子 丁洪 2026.04 — — ⚠️ 在途，张江量子湾 百度百科">
+            <tr><td><div class="company">铁马量子</div></td><td>丁洪</td><td>2026.04</td><td>—</td><td>—</td><td><span class="tag tag-amber">⚠️ 在途，张江量子湾</span></td><td class="links"><a href="https://baike.baidu.com/" target="_blank" rel="noopener">百度百科</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <div class="section-head">
+        <h2 class="section-title">量子计算+AI融合<span class="route-label tag tag-gray">1家</span></h2>
+        <div class="section-meta">1 家企业</div>
+      </div>
+      <div class="table-wrap">
+        <table style="min-width:1000px;">
+          <thead>
+            <tr>
+              <th style="width:130px;">企业</th>
+              <th style="width:180px;">创始人</th>
+              <th style="width:100px;">成立时间</th>
+              <th style="width:150px;">第一笔融资</th>
+              <th style="width:150px;">最新轮次</th>
+              <th style="width:220px;">融资状态</th>
+              <th style="width:140px;">证据来源</th>
+            </tr>
+          </thead>
+          <tbody class="company-group group-start" data-search="量子计算+AI融合 量坤科技 吕定顺 2026.01 2026.06 天使轮 2026.06 天使+轮 ✅ 数亿元 36氪 / 财联社">
+            <tr><td><div class="company">量坤科技</div></td><td>吕定顺</td><td>2026.01</td><td>2026.06 天使轮</td><td>2026.06 天使+轮</td><td><span class="tag tag-teal">✅ 数亿元</span></td><td class="links"><a href="https://36kr.com/" target="_blank" rel="noopener">36氪</a> / <a href="https://www.cls.cn/" target="_blank" rel="noopener">财联社</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <div class="section-head">
+        <h2 class="section-title">量子计算（路线未明确）<span class="route-label tag tag-gray">1家</span></h2>
+        <div class="section-meta">1 家企业</div>
+      </div>
+      <div class="table-wrap">
+        <table style="min-width:1000px;">
+          <thead>
+            <tr>
+              <th style="width:130px;">企业</th>
+              <th style="width:180px;">创始人</th>
+              <th style="width:100px;">成立时间</th>
+              <th style="width:150px;">第一笔融资</th>
+              <th style="width:150px;">最新轮次</th>
+              <th style="width:220px;">融资状态</th>
+              <th style="width:140px;">证据来源</th>
+            </tr>
+          </thead>
+          <tbody class="company-group group-start" data-search="量子计算（路线未明确） 量乾科技 安硕明（最终受益人） 2026.04 — — ⚠️ 未见融资报道 爱企查">
+            <tr><td><div class="company">量乾科技</div></td><td>安硕明（最终受益人）</td><td>2026.04</td><td>—</td><td>—</td><td><span class="tag tag-amber">⚠️ 未见融资报道</span></td><td class="links"><a href="https://aiqicha.baidu.com/" target="_blank" rel="noopener">爱企查</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div style="margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.8;">
+      新增企业清单由Savior基于公开信息交叉核实整理，数据截至2026年8月18日。<br>
+      数据来源：天眼查、爱企查、企查查、百度百科、36氪、财联社、新浪财经、东方财富、今日头条、知乎、烯牛数据等。<br>
+      如发现遗漏或错误，欢迎指正。
+    </div>
+
+    <script>
+      const input = document.getElementById('search');
+      const groups = [...document.querySelectorAll('.company-group')];
+      const empty = document.getElementById('empty');
+      function filter() {
+        const q = input.value.trim().toLowerCase();
+        let visible = 0;
+        groups.forEach(group => {
+          const ok = !q || group.dataset.search.toLowerCase().includes(q);
+          group.classList.toggle('hidden', !ok);
+          if (ok) visible += 1;
+        });
+        empty.style.display = visible ? 'none' : 'block';
+      }
+      input.addEventListener('input', filter);
+    </script>
+  </div>
+</body>
+</html>
